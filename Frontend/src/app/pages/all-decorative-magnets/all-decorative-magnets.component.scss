@@ -1,0 +1,105 @@
+@media (min-width: 1760px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 64px!important;
+    }
+}
+
+@media (min-width: 1535px) and (max-width: 1759px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 64px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 1470px) and (max-width: 1534px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 64px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 1408px) and (max-width: 1469px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 64px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1407px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 32px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(3, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .responsive-container {
+        justify-items: center!important;
+        padding-left: 48px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 896px) and (max-width: 1023px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 8px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 704px) and (max-width: 895px) {
+    .responsive-container {
+        justify-items: center!important;
+        padding-left: 48px;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(1, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 555px) and (max-width: 703px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 32px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(1, minmax(0, 1fr))!important;        
+    }
+}
+
+@media (min-width: 475px) and (max-width: 554px) {
+    .responsive-container {
+        justify-items: end!important;
+        padding-right: 16px!important;
+    }
+
+    .responsive-columns {
+        grid-template-columns: repeat(1, minmax(0, 1fr))!important;        
+    }
+}

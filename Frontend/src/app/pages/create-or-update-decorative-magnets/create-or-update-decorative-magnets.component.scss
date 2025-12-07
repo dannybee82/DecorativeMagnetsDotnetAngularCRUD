@@ -1,0 +1,37 @@
+.preview-image {
+    max-width: 300px;
+    height: auto;
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .responsive-container {
+        padding-left: 175px!important;
+    }
+
+    .preview-image {
+        max-width: 250px;
+        height: auto;
+    }
+}
+
+@media (min-width: 555px) and (max-width: 639px) {
+    .responsive-container {
+        padding-left: 125px!important;
+    }
+
+    .preview-image {
+        max-width: 250px;
+        height: auto;
+    }
+}
+
+@media (min-width: 475px) and (max-width: 554px) {
+    .responsive-container {
+        padding-left: 100px!important;
+    }
+
+    .preview-image {
+        max-width: 200px;
+        height: auto;
+    }
+}

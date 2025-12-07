@@ -1,0 +1,15 @@
+<dialog id="some_id" class="modal z-50" open>
+    <div class="modal-box max-w-6xl max-h-6xl">
+        <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" (click)="this.close.emit(true)">✕</button>
+        </form>
+        @if(name()) {
+         <h3 class="text-lg font-bold text-center">{{ name() }}</h3>
+        }
+        @if(image()) {
+            <div class="flex flex-row justify-center">
+                <img [src]="image()" [alt]="name()" [title]="name()">
+            </div>
+        }
+    </div>
+</dialog>

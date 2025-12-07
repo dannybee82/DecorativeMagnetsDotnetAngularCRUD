@@ -1,0 +1,5 @@
+ <select class="select select-neutral mt-1 xs:w-20 xs:me-1" [value]="this.productsPerPage" (change)="this.changePageSize($event)" #selectEl> 
+       @for(item of this.options(); track item) {
+        <option [value]="item">{{ item }}</option>
+       }
+</select>

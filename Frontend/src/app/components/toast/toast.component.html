@@ -1,0 +1,19 @@
+@if(isVisible()) {
+    <div class="toast z-100 absolute" [class]="position()">
+        @if(toastType() == getEnum().SUCCESS) {
+            <div class="alert alert-success text-white">
+                <span>{{ message() }}</span>
+            </div>
+        }
+        @if(toastType() == getEnum().WARNING) {
+            <div class="alert alert-warning text-black">
+                <span>{{ message() }}</span>
+            </div>
+        }
+        @if(toastType() == getEnum().ERROR) {
+            <div class="alert alert-error text-white">
+                <span>{{ message() }}</span>
+            </div>
+        }
+    </div>
+}

@@ -1,0 +1,37 @@
+<div class="join join-vertical pt-1">
+  @if (this.totalPages() >= 2) {
+    <input 
+      class="join-item btn btn-square" 
+      type="radio" 
+      name="options" 
+      aria-label="<" 
+      title="Previous Page" 
+      (click)="previous.checked= false;this.previousPage()" 
+      [checked]="false" 
+      [disabled]="this.hasPrevious()"
+      #previous 
+    />
+  }
+  @for (page of this.getPagination(); track page) {
+     <input 
+        class="join-item btn btn-square" 
+        type="radio" 
+        name="options" 
+        [aria-label]="page" 
+        title="Go to page: {{ page }}"  
+        [checked]="this.isCurrentPageIndex(page)"
+        (click)="this.setPageIndex(page)" />      
+  }
+  @if (this.totalPages() >= 2) {
+    <input 
+      class="join-item btn btn-square" 
+      type="radio" 
+      name="options" 
+      aria-label=">" 
+      title="Next Page"  
+      (click)="next.checked = false; this.nextPage()" 
+      [checked]="false" 
+      [disabled]="this.hasNext()"
+      #next />
+  }
+</div>

@@ -1,0 +1,12 @@
+<div class="absolute top-1 left-1 z-50 border-1 border-lightgrey border-solid rounded">
+    <app-menu />
+</div>
+@if(showPaginationAndPager()) {
+    <div class="absolute top-45 left-1 z-50 rounded ps-2 responsive-padding">
+        <app-pager />
+    </div>
+    <div class="absolute top-65 left-1 z-50 rounded ps-6">
+        <app-pagination />
+    </div>
+}
+<router-outlet />

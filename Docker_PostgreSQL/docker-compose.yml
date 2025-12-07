@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  postgresql_db_decorative_magnets:
+    image: postgres:16.4
+    container_name: postgresql_db_decorative_magnets
+    restart: unless-stopped
+    environment:      
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Test2025!
+      - POSTGRES_DB=DecorativeMagnets
+    ports: 
+      - "5432:5432"
