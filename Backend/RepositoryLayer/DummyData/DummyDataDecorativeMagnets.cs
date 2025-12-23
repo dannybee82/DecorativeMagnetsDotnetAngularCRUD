@@ -31,184 +31,212 @@ namespace RepositoryLayer.DummyData
                 new DecorativeMagnet()
                 {
                     Id = 3,
-                    Name = "Belle in a Gala Dress",
+                    Name = "Angel of Protection and Little Girl",
                     ImageId = 3,
                     ThumbnailId = 3
                 },
                 new DecorativeMagnet()
                 {
                     Id = 4,
-                    Name = "Caitlin de Caen in an 18th Century Dress",
+                    Name = "Belle in a Gala Dress",
                     ImageId = 4,
                     ThumbnailId = 4
                 },
                 new DecorativeMagnet()
                 {
                     Id = 5,
-                    Name = "Follies of Fashion",
+                    Name = "Caitlin de Caen in an 18th Century Dress",
                     ImageId = 5,
                     ThumbnailId = 5
                 },
                 new DecorativeMagnet()
                 {
                     Id = 6,
-                    Name = "A Hommage to Anna the Benign",
+                    Name = "Celestial Beauty",
                     ImageId = 6,
                     ThumbnailId = 6
                 },
                 new DecorativeMagnet()
                 {
                     Id = 7,
-                    Name = "The Jester Queen at the Fairground",
+                    Name = "Eye of the Manticore",
                     ImageId = 7,
                     ThumbnailId = 7
                 },
                 new DecorativeMagnet()
                 {
                     Id = 8,
-                    Name = "Jester Queen",
+                    Name = "Follies of Fashion",
                     ImageId = 8,
                     ThumbnailId = 8
                 },
                 new DecorativeMagnet()
                 {
                     Id = 9,
-                    Name = "Juliette Wolpertinger",
+                    Name = "A Hommage to Anna the Benign",
                     ImageId = 9,
                     ThumbnailId = 9
                 },
                 new DecorativeMagnet()
                 {
                     Id = 10,
-                    Name = "Lumina the Celestial Weaver",
+                    Name = "The Jester Queen at the Fairground",
                     ImageId = 10,
                     ThumbnailId = 10
                 },
                 new DecorativeMagnet()
                 {
                     Id = 11,
-                    Name = "Matilda du Mal",
+                    Name = "Jester Queen",
                     ImageId = 11,
                     ThumbnailId = 11
                 },
                 new DecorativeMagnet()
                 {
                     Id = 12,
-                    Name = "Miss Sapphire",
+                    Name = "Juliette Wolpertinger",
                     ImageId = 12,
                     ThumbnailId = 12
                 },
                 new DecorativeMagnet()
                 {
                     Id = 13,
-                    Name = "Natasha de Nantes",
+                    Name = "Lumina the Celestial Weaver",
                     ImageId = 13,
                     ThumbnailId = 13
                 },
                 new DecorativeMagnet()
                 {
                     Id = 14,
-                    Name = "Perchance a Dream",
+                    Name = "Matilda du Mal",
                     ImageId = 14,
                     ThumbnailId = 14
                 },
                 new DecorativeMagnet()
                 {
                     Id = 15,
-                    Name = "A Queen of Angels",
+                    Name = "Miss Sapphire",
                     ImageId = 15,
                     ThumbnailId = 15
                 },
                 new DecorativeMagnet()
                 {
                     Id = 16,
-                    Name = "The Queen of Spades",
+                    Name = "Natasha de Nantes",
                     ImageId = 16,
                     ThumbnailId = 16
                 },
                 new DecorativeMagnet()
                 {
                     Id = 17,
-                    Name = "Radiant Beauty",
+                    Name = "Perchance a Dream",
                     ImageId = 17,
                     ThumbnailId = 17
                 },
                 new DecorativeMagnet()
                 {
                     Id = 18,
-                    Name = "Saskia des Esseintes",
+                    Name = "A Queen of Angels",
                     ImageId = 18,
                     ThumbnailId = 18
                 },
                 new DecorativeMagnet()
                 {
                     Id = 19,
-                    Name = "Saskia des Esseintes conveys the Message of World Peace",
+                    Name = "The Queen of Spades",
                     ImageId = 19,
                     ThumbnailId = 19
                 },
                 new DecorativeMagnet()
                 {
                     Id = 20,
-                    Name = "Snow White in Modern Style",
+                    Name = "Radiant Beauty",
                     ImageId = 20,
                     ThumbnailId = 20
                 },
                 new DecorativeMagnet()
                 {
                     Id = 21,
-                    Name = "The Enigmatic Evelyn",
+                    Name = "Rose Garden",
                     ImageId = 21,
                     ThumbnailId = 21
                 },
                 new DecorativeMagnet()
                 {
                     Id = 22,
-                    Name = "The Forest Enchantress",
+                    Name = "Saskia des Esseintes",
                     ImageId = 22,
                     ThumbnailId = 22
                 },
                 new DecorativeMagnet()
                 {
                     Id = 23,
-                    Name = "The Moonlit Siren",
+                    Name = "Saskia des Esseintes conveys the Message of World Peace",
                     ImageId = 23,
                     ThumbnailId = 23
                 },
                 new DecorativeMagnet()
                 {
                     Id = 24,
-                    Name = "The Scarlet Princess",
+                    Name = "Snow White in Modern Style",
                     ImageId = 24,
                     ThumbnailId = 24
                 },
                 new DecorativeMagnet()
                 {
                     Id = 25,
-                    Name = "Time for a Party",
+                    Name = "The Enigmatic Evelyn",
                     ImageId = 25,
                     ThumbnailId = 25
                 },
                 new DecorativeMagnet()
                 {
                     Id = 26,
-                    Name = "Time for Coffee",
+                    Name = "The Forest Enchantress",
                     ImageId = 26,
                     ThumbnailId = 26
                 },
                 new DecorativeMagnet()
                 {
                     Id = 27,
-                    Name = "Triss de Toulouse",
+                    Name = "The Moonlit Siren",
                     ImageId = 27,
                     ThumbnailId = 27
                 },
                 new DecorativeMagnet()
                 {
                     Id = 28,
-                    Name = "Youthfull and Mysterious Angel",
+                    Name = "The Scarlet Princess",
                     ImageId = 28,
                     ThumbnailId = 28
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 29,
+                    Name = "Time for a Party",
+                    ImageId = 29,
+                    ThumbnailId = 29
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 30,
+                    Name = "Time for Coffee",
+                    ImageId = 30,
+                    ThumbnailId = 30
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 31,
+                    Name = "Triss de Toulouse",
+                    ImageId = 31,
+                    ThumbnailId = 31
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 32,
+                    Name = "Youthfull and Mysterious Angel",
+                    ImageId = 32,
+                    ThumbnailId = 32
                 }
             };
         }

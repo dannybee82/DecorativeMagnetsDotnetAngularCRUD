@@ -36,6 +36,7 @@ namespace RepositoryLayer
                 .Concat(DummyDataImagesPart_004.Create())
                 .Concat(DummyDataImagesPart_005.Create())
                 .Concat(DummyDataImagesPart_006.Create())
+                .Concat(DummyDataImagesPart_007.Create())
                 .ToList();
 
             modelBuilder.Entity<Image>().HasData(
@@ -48,6 +49,7 @@ namespace RepositoryLayer
                .Concat(DummyDataThumbnailsPart_004.Create())
                .Concat(DummyDataThumbnailsPart_005.Create())
                .Concat(DummyDataThumbnailsPart_006.Create())
+               .Concat(DummyDataThumbnailsPart_007.Create())
                .ToList();
 
             modelBuilder.Entity<Thumbnail>().HasData(

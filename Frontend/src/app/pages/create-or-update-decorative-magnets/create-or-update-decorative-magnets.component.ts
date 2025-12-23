@@ -1,6 +1,6 @@
 import { Component, inject, input, InputSignal, OnInit, signal, WritableSignal } from '@angular/core';
 import { DecorativeMagnet } from '../../models/decorative-magnets/decorative-magnet.interface';
-import { form, required, Field, validateTree } from '@angular/forms/signals';
+import { form, required, Field, validateTree, RootFieldContext } from '@angular/forms/signals';
 import { OpenFileComponent } from '../../components/open-file/open-file.component';
 import { OpenFilesService } from '../../services/open-files/open-files.service';
 import { DecorativeMagnetFormData } from '../../models/decorative-magnets/decorative-magnet-form-data.interface';
@@ -36,9 +36,9 @@ export class CreateOrUpdateDecorativeMagnetsComponent implements OnInit {
   });
   protected readonly decorativeMagnetForm = form(this.decorativeMagnet, (form) => {
     required(form.name, { message: 'Name is required' });
-    validateTree(form, context => {
-      return context.field.imageBase64().value() === '' ?  
-        { field: context.field.imageBase64, kind: 'no-image', message: 'No image is set' } :
+    validateTree(form, (context: RootFieldContext<DecorativeMagnetFormData>)  => {
+      return context.fieldTree.imageBase64().value() === '' ?  
+        { field: context.fieldTree.imageBase64, kind: 'no-image', message: 'No image is set' } :
         undefined;
     })
   });

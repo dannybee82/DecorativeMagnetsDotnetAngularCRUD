@@ -12,7 +12,6 @@ export class OpenFileComponent {
   readonly fileExtensions: InputSignal<string> = input<string>('*');
   readonly allowMultipleSelection: InputSignal<boolean> = input<boolean>(false);
   readonly isDisabled: InputSignal<boolean> = input<boolean>(false);
-  readonly matIcon: InputSignal<string> = input<string>('');
 
   readonly selectedFile: OutputEmitterRef<File> = output<File>()
   readonly selectedFiles: OutputEmitterRef<File[]> = output<File[]>()
@@ -29,7 +28,7 @@ export class OpenFileComponent {
         if(element.files) {
           const arr: File[] = [];
 
-          for(let i = 0; element.files.length; i++) {
+          for(let i = 0; i < element.files.length; i++) {
             arr.push(element.files[i]);
           }
 
