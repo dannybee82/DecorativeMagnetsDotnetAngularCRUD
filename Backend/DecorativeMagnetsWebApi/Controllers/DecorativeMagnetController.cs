@@ -17,11 +17,11 @@ namespace DecorativeMagnetsWebApi.Controllers
         }
 
         [HttpGet("GetPagedList")]
-        public async Task<IActionResult> GetPagedList(int? pageNumber, int? pageSize)
+        public async Task<IActionResult> GetPagedList(int? pageNumber, int? pageSize, string? sort)
         {
             try
             {
-                var list = await _decorativeMagnetService.GetList(pageNumber, pageSize);
+                var list = await _decorativeMagnetService.GetList(pageNumber, pageSize, sort);
                 return Ok(list);
             }
             catch (Exception ex)

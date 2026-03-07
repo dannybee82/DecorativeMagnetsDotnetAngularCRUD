@@ -1,0 +1,12 @@
+<div class="flex flex-row">
+    <button [class]="isAscending() ? 'btn btn-primary me-1' : 'btn btn-outline me-1'" title="Sort Ascending" (click)="isAscending.set(!isAscending());isDescending.set(false);sortAction();">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+        </svg>
+    </button>
+     <button [class]="isDescending() ? 'btn btn-primary' : 'btn btn-outline'" title="Sort Ascending" (click)="isDescending.set(!isDescending());isAscending.set(false);sortAction();">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+        </svg>
+    </button>
+</div>

@@ -56,14 +56,30 @@ namespace RepositoryLayer.Repository
                 .ConfigureAwait(false);
         }
 
-        public async Task<PaginatedList<DecorativeMagnet>> GetList(int? pageNumber, int? pageSize)
+        public async Task<PaginatedList<DecorativeMagnet>> GetList(int? pageNumber, int? pageSize, string? sort)
         {
             IQueryable<DecorativeMagnet> query = _dbContext.DecorativeMagnets
-                .AsNoTracking()
-               .OrderByDescending(x => x.Id)
+               .AsNoTracking()               
                .Include(x => x.Thumbnail);
 
-            return await PaginatedList<DecorativeMagnet>.CreateAsync(query, pageNumber ?? 1, pageSize ?? PageSize);
+            if(string.IsNullOrEmpty(sort))
+            {
+                query = query.OrderByDescending(x => x.Id);
+            }
+            else
+            {
+                Console.WriteLine(sort);
+                Console.WriteLine(sort.Equals("ASC"));
+                Console.WriteLine(sort.Equals("DESC"));
+
+                query = sort.Equals("ASC", StringComparison.OrdinalIgnoreCase) ?
+                    query.OrderBy(x => x.Name) :
+                    sort.Equals("DESC", StringComparison.OrdinalIgnoreCase) ?
+                        query.OrderByDescending(x => x.Name) :
+                        query.OrderByDescending(x => x.Id);
+            }
+
+            return await PaginatedList<DecorativeMagnet>.CreateAsync(query, pageNumber ?? 1, pageSize ?? PageSize, sort);
         }
 
         public IQueryable<DecorativeMagnet> GetQueryable()
@@ -87,7 +103,7 @@ namespace RepositoryLayer.Repository
 
         public async Task<PaginatedList<DecorativeMagnet>> GetList(IQueryable<DecorativeMagnet> query, int? pageNumber, int? pageSize)
         {
-            return await PaginatedList<DecorativeMagnet>.CreateAsync(query, pageNumber ?? 1, pageSize ?? PageSize);
+            return await PaginatedList<DecorativeMagnet>.CreateAsync(query, pageNumber ?? 1, pageSize ?? PageSize, String.Empty);
         }
 
         public async Task StopTracking()

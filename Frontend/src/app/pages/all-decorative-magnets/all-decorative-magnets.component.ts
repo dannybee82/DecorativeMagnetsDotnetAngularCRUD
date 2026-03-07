@@ -13,6 +13,8 @@ import { RouterModule } from '@angular/router';
 import { ToastService } from '../../services/toast/toast.service';
 import { PaginationAndPagerService } from '../../services/pagination-and-pager/pagination-and-pager.service';
 import { PaginationAndPager } from '../../models/pagination-and-pager/pagination-and-pager.interface';
+import { SortService } from '../../services/sort/sort.service';
+import { SortAlphabetically, SortAlphabeticallyAscending, SortAlphabeticallyDefault, SortAlphabeticallyDescending, SortAlphabeticallyNone } from '../../models/sort/sort.interface';
 
 @Component({
   selector: 'app-all-decorative-magnets',
@@ -31,18 +33,27 @@ export class AllDecorativeMagnetsComponent implements OnInit {
 
   private _pageNumber: WritableSignal<number> = signal(1);
   private _pageSize: WritableSignal<number> = signal(8);
+  private _sortAlphabetically: WritableSignal<SortAlphabeticallyAscending | SortAlphabeticallyDescending | SortAlphabeticallyNone | SortAlphabeticallyDefault> = signal('DEFAULT');
 
   private decorativeMagnetsService = inject(DecorativeMagnetsService);
   private imagesService = inject(ImagesService);
   private thumbnailsService = inject(ThumbnailsService);
   private toastService = inject(ToastService);
   private paginationAndPagerService = inject(PaginationAndPagerService);
+  private sortService = inject(SortService);
 
   ngOnInit(): void {
     this.paginationAndPagerService.paginationAndPager.subscribe((pagination: PaginationAndPager) => {
       if(pagination.pageNumber !== this._pageNumber() || pagination.pageSize !== this._pageSize()) {
         this._pageNumber.set(pagination.pageNumber);
         this._pageSize.set(pagination.pageSize);
+        this.getPagedList();
+      }
+    });
+
+    this.sortService.sortState.subscribe((data: SortAlphabetically) => {
+      if(data.sort !== 'DEFAULT') {
+        this._sortAlphabetically.set(data.sort);
         this.getPagedList();
       }
     });
@@ -94,7 +105,7 @@ export class AllDecorativeMagnetsComponent implements OnInit {
   }
 
   private getPagedList(): void {
-    this.decorativeMagnetsService.getPagedList(this._pageNumber(), this._pageSize()).subscribe({
+    this.decorativeMagnetsService.getPagedList(this._pageNumber(), this._pageSize(), this._sortAlphabetically()).subscribe({
       next: (data: PaginatedList<DecorativeMagnet>) => {
         this.allDecorativeMagnets.set(data.items);
         this.paginationAndPagerService.updateTotalPages(data.totalPages);

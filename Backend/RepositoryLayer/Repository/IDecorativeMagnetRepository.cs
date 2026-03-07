@@ -15,7 +15,7 @@ namespace RepositoryLayer.Repository
 
         Task<List<DecorativeMagnet>> GetAll();
 
-        Task<PaginatedList<DecorativeMagnet>> GetList(int? pageNumber, int? pageSize);
+        Task<PaginatedList<DecorativeMagnet>> GetList(int? pageNumber, int? pageSize, string? sort);
 
         Task<PaginatedList<DecorativeMagnet>> GetList(IQueryable<DecorativeMagnet> query, int? pageNumber, int? pageSize);
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ScrollToTopComponent } from './scroll-to-top.component';
-import { beforeEach, describe, expect, it } from "Vitest";
+import { describe, beforeEach, it, expect } from 'vitest';
 
 describe('ScrollToTopAdminComponent', () => {
   let component: ScrollToTopComponent;

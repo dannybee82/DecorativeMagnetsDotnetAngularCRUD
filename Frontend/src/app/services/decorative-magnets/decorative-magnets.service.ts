@@ -29,11 +29,12 @@ export class DecorativeMagnetsService extends ApiServiceAbstract<DecorativeMagne
     });
   }
 
-  getPagedList(pageNumber: number, pageSize: number): Observable<PaginatedList<DecorativeMagnet>> {
+  getPagedList(pageNumber: number, pageSize: number, sort: string | undefined): Observable<PaginatedList<DecorativeMagnet>> {
     const params: HttpParams = new HttpParams()
     .append('pageNumber', pageNumber)
-    .append('pageSize', pageSize);
-    
+    .append('pageSize', pageSize)
+    .append('sort', sort ?? '');
+        
     return this.http.get<PaginatedList<DecorativeMagnet>>(api + 'DecorativeMagnet/GetPagedList', {params});
   }
 

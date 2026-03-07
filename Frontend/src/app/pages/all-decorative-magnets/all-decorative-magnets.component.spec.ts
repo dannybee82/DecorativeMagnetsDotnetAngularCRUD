@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AllDecorativeMagnetsComponent } from './all-decorative-magnets.component';
+import { describe, beforeEach, it, expect } from 'vitest';
 
 describe('AllDecorativeMagnetsComponent', () => {
   let component: AllDecorativeMagnetsComponent;

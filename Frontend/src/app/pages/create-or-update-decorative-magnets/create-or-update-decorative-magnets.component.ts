@@ -1,6 +1,6 @@
 import { Component, inject, input, InputSignal, OnInit, signal, WritableSignal } from '@angular/core';
 import { DecorativeMagnet } from '../../models/decorative-magnets/decorative-magnet.interface';
-import { form, required, Field, validateTree, RootFieldContext } from '@angular/forms/signals';
+import { form, required, validateTree, RootFieldContext, FormField } from '@angular/forms/signals';
 import { OpenFileComponent } from '../../components/open-file/open-file.component';
 import { OpenFilesService } from '../../services/open-files/open-files.service';
 import { DecorativeMagnetFormData } from '../../models/decorative-magnets/decorative-magnet-form-data.interface';
@@ -17,7 +17,7 @@ import { PaginationAndPagerService } from '../../services/pagination-and-pager/p
 
 @Component({
   selector: 'app-create-or-update-decorative-magnets',
-  imports: [OpenFileComponent, Field, RouterLink, RouterModule, DeleteModalComponent],
+  imports: [OpenFileComponent, FormField, RouterLink, RouterModule, DeleteModalComponent],
   templateUrl: './create-or-update-decorative-magnets.component.html',
   styleUrl: './create-or-update-decorative-magnets.component.scss',
 })
@@ -80,8 +80,8 @@ export class CreateOrUpdateDecorativeMagnetsComponent implements OnInit {
           this.openFilesService.isValidDataType(result) &&
           this.openFilesService.checkMaximumSize($event.size)
         ) {
-          this.decorativeMagnetForm.thumbnailId().setControlValue(0);
-          this.decorativeMagnetForm.imageBase64().setControlValue(result);
+          this.decorativeMagnetForm.thumbnailId().value.set(0);
+          this.decorativeMagnetForm.imageBase64().value.set(result);
         } else {
           if (!this.openFilesService.isValidDataType(result)) {
             this.toastService.error('File is invalid');
@@ -94,9 +94,10 @@ export class CreateOrUpdateDecorativeMagnetsComponent implements OnInit {
       }
     });
   }
+  
   removeFile(): void {
-    this.decorativeMagnetForm.thumbnailId().setControlValue(0);
-    this.decorativeMagnetForm.imageBase64().setControlValue('');
+    this.decorativeMagnetForm.thumbnailId().value.set(0);
+    this.decorativeMagnetForm.imageBase64().value.set('');
   }
 
   openDeleteModal(): void {

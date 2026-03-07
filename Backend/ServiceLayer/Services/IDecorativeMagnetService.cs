@@ -20,7 +20,7 @@ namespace ServiceLayer.Services
 
         Task<DecorativeMagnetDto?> GetDecorativeMagnetById(int id);
 
-        Task<PaginatedList<DecorativeMagnetDto>> GetList(int? pageNumber, int? pageSize);
+        Task<PaginatedList<DecorativeMagnetDto>> GetList(int? pageNumber, int? pageSize, string? sort);
     }
 
 }

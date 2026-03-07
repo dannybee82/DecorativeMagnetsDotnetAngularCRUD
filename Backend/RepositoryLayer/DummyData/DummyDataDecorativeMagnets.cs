@@ -237,6 +237,62 @@ namespace RepositoryLayer.DummyData
                     Name = "Youthfull and Mysterious Angel",
                     ImageId = 32,
                     ThumbnailId = 32
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 33,
+                    Name = "Olivia des Beauchamps at the Swing",
+                    ImageId = 33,
+                    ThumbnailId = 33
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 34,
+                    Name = "Dorothy in adulthood with her dog Toto",
+                    ImageId = 34,
+                    ThumbnailId = 34
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 35,
+                    Name = "Odette de Villerose",
+                    ImageId = 35,
+                    ThumbnailId = 35
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 36,
+                    Name = "Olivia des Beauchamps visiting the Museum",
+                    ImageId = 36,
+                    ThumbnailId = 36
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 37,
+                    Name = "The Celestial Guardian of the Galaxy",
+                    ImageId = 37,
+                    ThumbnailId = 37
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 38,
+                    Name = "Joséphine de Mauvefort dressed for the Soiree",
+                    ImageId = 38,
+                    ThumbnailId = 38
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 39,
+                    Name = "Éléonore de Valcour",
+                    ImageId = 39,
+                    ThumbnailId = 39
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 40,
+                    Name = "A Deep Meditation",
+                    ImageId = 40,
+                    ThumbnailId = 40
                 }
             };
         }

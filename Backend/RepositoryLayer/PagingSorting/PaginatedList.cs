@@ -51,14 +51,37 @@ namespace RepositoryLayer.PagingSorting
             set { }
         }
 
-        public static async Task<PaginatedList<T>> CreateAsync(IQueryable<T> source, int currentPage, int pageSize)
+        public static async Task<PaginatedList<T>> CreateAsync(IQueryable<T> source, int currentPage, int pageSize, string? sort)
         {
             var count = await source.CountAsync();
 
             var parameter = Expression.Parameter(typeof(T));
             var property = Expression.Property(parameter, "Id");
             var propAsObject = Expression.Convert(property, typeof(object));
-            source = source.OrderByDescending(Expression.Lambda<Func<T, object>>(propAsObject, parameter));
+
+            if(string.IsNullOrEmpty(sort))
+            {
+                source = source.OrderByDescending(Expression.Lambda<Func<T, object>>(propAsObject, parameter));
+            }
+            else
+            {
+                if(sort.Equals("ASC"))
+                {
+                    var propertyName = Expression.Property(parameter, "Name");
+                    var propAsObjectName = Expression.Convert(propertyName, typeof(object));
+                    source = source.OrderBy(Expression.Lambda<Func<T, object>>(propAsObjectName, parameter));
+                }
+                else if(sort.Equals("DESC"))
+                {
+                    var propertyName = Expression.Property(parameter, "Name");
+                    var propAsObjectName = Expression.Convert(propertyName, typeof(object));
+                    source = source.OrderByDescending(Expression.Lambda<Func<T, object>>(propAsObjectName, parameter));
+                }
+                else
+                {
+                    source = source.OrderByDescending(Expression.Lambda<Func<T, object>>(propAsObject, parameter));
+                }
+            }
 
             source = source.Skip((currentPage - 1) * pageSize).Take(pageSize);
 

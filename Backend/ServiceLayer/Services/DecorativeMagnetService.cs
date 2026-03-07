@@ -173,9 +173,9 @@ namespace ServiceLayer.Services
             }
         }
 
-        public async Task<PaginatedList<DecorativeMagnetDto>> GetList(int? pageNumber, int? pageSize)
+        public async Task<PaginatedList<DecorativeMagnetDto>> GetList(int? pageNumber, int? pageSize, string? sort)
         {
-            PaginatedList<DecorativeMagnet> result = await _decorativeMagnetRepository.GetList(pageNumber, pageSize);
+            PaginatedList<DecorativeMagnet> result = await _decorativeMagnetRepository.GetList(pageNumber, pageSize, sort);
 
             return new PaginatedList<DecorativeMagnetDto>
             {

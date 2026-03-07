@@ -6,7 +6,7 @@
                 <figure 
                     class="flex justify-items-center content-center h-115" 
                     [routerLink]="['details', decorativeMagnet.id]">
-                    @if(this.allThumbnailsLoaded()) {
+                    @if(allThumbnailsLoaded()) {
                         @let thumbnail = getThumbnail(decorativeMagnet.thumbnailId ?? 0);
                         @if(thumbnail) {
                             <img
@@ -54,8 +54,8 @@
 </div>
 @if(isFullScreen()) {
     <app-fullscreen 
-        [name]="this.fullScreenData().decorativeMagnet?.name" 
-        [image]="this.fullScreenData().image" 
+        [name]="fullScreenData().decorativeMagnet?.name" 
+        [image]="fullScreenData().image" 
         (close)="closeFullScreen()" />
 } 
 <app-scroll-to-top />

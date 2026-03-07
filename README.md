@@ -1,6 +1,6 @@
 # DecorativeMagnetsDotnetAngularCRUD
 
-An _Angular 21_ application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4) with _daisyUI_ (_Tailwind CSS_) that demonstrates the regular HttpClient with Observables.  
+An _Angular 21_ application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1) with _daisyUI_ (_Tailwind CSS_) that demonstrates the regular HttpClient with Observables.  
 It uses a .NET/C# WebAPI as Backend and a PostgreSQL database.  
 The .NET/C# WebAPI stores 'Decorative Magnets'/images and thumbnails in the database as base64-strings.
 
@@ -53,6 +53,26 @@ or shorter:
 _ng s --o_
 
 ### **Changelog:**
+
+_March 2026_
+
+**Frontend:**
+
+\- Updated packages for _@angular/cli@21.2.1_
+
+\- Various changes in the components.
+
+\- Updated import statements for specification files (_Vitest_).
+
+\- _Signal Forms_ use _[formField]_ directive.
+
+\- Added functionality for alphabetically sorting.
+
+**Backend:**
+
+\- Added 8 new Decorative Magnets.
+
+\- Added functionality for alphabetically sorting.
 
 _December 2025 (more changes)_
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FullscreenComponent } from './fullscreen.component';
+import { describe, beforeEach, it, expect } from 'vitest';
 
 describe('FullscreenComponent', () => {
   let component: FullscreenComponent;
