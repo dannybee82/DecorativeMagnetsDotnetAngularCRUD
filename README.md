@@ -1,6 +1,6 @@
 # DecorativeMagnetsDotnetAngularCRUD
 
-An _Angular 21_ application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1) with _daisyUI_ (_Tailwind CSS_) that demonstrates the regular HttpClient with Observables.  
+An _Angular 22_ application (with [Angular CLI](https://github.com/angular/angular-cli) version 22.0.0) with _daisyUI_ (_Tailwind CSS_) that demonstrates the regular HttpClient with Observables.  
 It uses a .NET/C# WebAPI as Backend and a PostgreSQL database.  
 The .NET/C# WebAPI stores 'Decorative Magnets'/images and thumbnails in the database as base64-strings.
 
@@ -34,7 +34,7 @@ For more information see the link below:
 
 ### **Angular application installation**
 
-_Note:_ **Angular 21** needs a **Node.js** version of at least _20.19.0_
+_Note:_ **Angular 22** needs a **Node.js** version of at least _22.22.3_
 
 **Command to install**
 
@@ -53,6 +53,24 @@ or shorter:
 _ng s --o_
 
 ### **Changelog:**
+
+_June 2026_
+
+**Frontend:**
+
+\- Upgrade to _Angular 22_ and upgraded other packages.
+
+\- Migrated _@Injectable_ to _@Service_ (except for 1 _@Injectable_).
+
+\- Using the default: _ChangeDetectionStrategy.OnPush_ in stead of _ChangeDetectionStrategy.Eager_.
+
+\- Using the latest file naming conventions - and deleting the old schematics from _angular.json_
+
+\- Various small changes.
+
+**Backend:**
+
+\- Replaced 2 old Decorative Magnets with 2 new Decorative Magnets.
 
 _March 2026_
 

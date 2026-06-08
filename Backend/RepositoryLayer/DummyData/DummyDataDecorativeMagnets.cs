@@ -122,7 +122,7 @@ namespace RepositoryLayer.DummyData
                 new DecorativeMagnet()
                 {
                     Id = 16,
-                    Name = "Natasha de Nantes",
+                    Name = "Another Deep Meditation",
                     ImageId = 16,
                     ThumbnailId = 16
                 },
@@ -178,7 +178,7 @@ namespace RepositoryLayer.DummyData
                 new DecorativeMagnet()
                 {
                     Id = 24,
-                    Name = "Snow White in Modern Style",
+                    Name = "Of Past and Present Times",
                     ImageId = 24,
                     ThumbnailId = 24
                 },

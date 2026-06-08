@@ -1,25 +1,25 @@
 import { Routes } from '@angular/router';
-import { AllDecorativeMagnetsComponent } from './pages/all-decorative-magnets/all-decorative-magnets.component';
-import { DetailsDecorativeMagnetComponent } from './pages/details-decorative-magnet/details-decorative-magnet.component';
-import { CreateOrUpdateDecorativeMagnetsComponent } from './pages/create-or-update-decorative-magnets/create-or-update-decorative-magnets.component';
-import { LayoutComponent } from './layout/layout/layout.component';
+import { AllDecorativeMagnets } from './pages/all-decorative-magnets/all-decorative-magnets';
+import { DetailsDecorativeMagnet } from './pages/details-decorative-magnet/details-decorative-magnet';
+import { CreateOrUpdateDecorativeMagnets } from './pages/create-or-update-decorative-magnets/create-or-update-decorative-magnets';
+import { Layout } from './layout/layout/layout';
 
 export const routes: Routes = [
     {
         path: '',
-        component: LayoutComponent,
+        component: Layout,
         children: [
              {
                 path: '',
-                component: AllDecorativeMagnetsComponent
+                component: AllDecorativeMagnets
             },
             {
                 path: 'details/:id',
-                component: DetailsDecorativeMagnetComponent
+                component: DetailsDecorativeMagnet
             },
             {
                 path: 'create-or-update/:id',
-                component: CreateOrUpdateDecorativeMagnetsComponent
+                component: CreateOrUpdateDecorativeMagnets
             }
         ]
     }   

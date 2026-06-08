@@ -1,4 +1,4 @@
-export interface DeleteModal {
+export interface DeleteModalInterface {
     title: string,
     message: string,
     additionalText: string,

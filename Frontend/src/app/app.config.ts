@@ -1,12 +1,12 @@
 import { ApplicationConfig, inject } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { routes } from './app.routes';
-import { HttpEvent, HttpEventType, HttpHandlerFn, HttpRequest, provideHttpClient, withInterceptors } from '@angular/common/http';
+import { HttpEvent, HttpEventType, HttpHandlerFn, HttpRequest, provideHttpClient, withInterceptors, withXhr } from '@angular/common/http';
 import { Observable, tap, finalize } from 'rxjs';
-import { LoadingService } from './services/loading/loading.service';
+import { Loading } from './services/loading/loading';
 
 export function loadingInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
-  const loadingService = inject(LoadingService);
+  const loadingService = inject(Loading);
   
   // Show loading spinner when request starts
   loadingService.isLoading.next(true);
@@ -28,7 +28,7 @@ export function loadingInterceptor(req: HttpRequest<unknown>, next: HttpHandlerF
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withComponentInputBinding()),
-    provideHttpClient(
+    provideHttpClient(withXhr(), 
       withInterceptors([loadingInterceptor])
     )
   ]

@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SpinnerComponent } from './components/spinner/spinner.component';
-import { ToastComponent } from './components/toast/toast.component';
+import { Spinner } from './components/spinner/spinner';
+import { Toastr } from './components/toast/toastr';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SpinnerComponent, ToastComponent],
+  imports: [RouterOutlet, Spinner, Toastr],
   template: `
     <router-outlet />
     <app-spinner />
