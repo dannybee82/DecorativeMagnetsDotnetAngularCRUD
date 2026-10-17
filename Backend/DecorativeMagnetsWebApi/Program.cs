@@ -28,7 +28,12 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin", builder =>
+#if DEBUG
         builder.WithOrigins("http://localhost:4200", "https://localhost:4200")
+#else
+        // for the demo with Docker.
+        builder.WithOrigins("http://localhost:80", "http://localhost")
+#endif
         .AllowAnyHeader()
         .AllowAnyMethod()
     );

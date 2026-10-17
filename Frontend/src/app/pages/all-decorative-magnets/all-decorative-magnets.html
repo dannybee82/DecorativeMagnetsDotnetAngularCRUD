@@ -1,8 +1,8 @@
 <div class="flex-row justify-items-end mt-2 mb-2 responsive-container">
 @if(allDecorativeMagnets().length > 0) {
-    <div class="grid grid-cols-4 gap-3 responsive-columns">  
+    <div class="grid grid-cols-4 align-center gap-3 responsive-columns">  
         @for(decorativeMagnet of allDecorativeMagnets(); track decorativeMagnet.id) {
-            <div class="card bg-base-100 w-95 shadow-sm border-1 border-dashed border-neutral">            
+            <div class="card h-[95%] bg-base-100 w-95 shadow-sm border-1 border-dashed border-neutral">            
                 <figure 
                     class="flex justify-items-center content-center h-115" 
                     [routerLink]="['details', decorativeMagnet.id]">

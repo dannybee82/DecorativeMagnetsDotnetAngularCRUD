@@ -241,7 +241,7 @@ namespace RepositoryLayer.DummyData
                 new DecorativeMagnet()
                 {
                     Id = 33,
-                    Name = "Olivia des Beauchamps at the Swing",
+                    Name = "Olivia des Beauchamps on the Swing",
                     ImageId = 33,
                     ThumbnailId = 33
                 },
@@ -293,7 +293,63 @@ namespace RepositoryLayer.DummyData
                     Name = "A Deep Meditation",
                     ImageId = 40,
                     ThumbnailId = 40
-                }
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 41,
+                    Name = "Native American Girl with a Deer",
+                    ImageId = 41,
+                    ThumbnailId = 41
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 42,
+                    Name = "Victorian Woman during the Lunch Break",
+                    ImageId = 42,
+                    ThumbnailId = 42
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 43,
+                    Name = "Sophie Douceur in the Rose Garden",
+                    ImageId = 43,
+                    ThumbnailId = 43
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 44,
+                    Name = "Lune Chatelain and her Cat",
+                    ImageId = 44,
+                    ThumbnailId = 44
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 45,
+                    Name = "Seraphine Morne with a Castle in the Background",
+                    ImageId = 45,
+                    ThumbnailId = 45
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 46,
+                    Name = "Geneviève d’Aubigny in the Palace Garden",
+                    ImageId = 46,
+                    ThumbnailId = 46
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 47,
+                    Name = "Olivia des Beauchamps walking on the Red Carpet",
+                    ImageId = 47,
+                    ThumbnailId = 47
+                },
+                new DecorativeMagnet()
+                {
+                    Id = 48,
+                    Name = "The High Priestess of the Sun",
+                    ImageId = 48,
+                    ThumbnailId = 48
+                },
             };
         }
 
